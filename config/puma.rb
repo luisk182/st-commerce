@@ -8,6 +8,7 @@ port ENV.fetch("PORT") { 3000 }
 
 environment ENV.fetch("RAILS_ENV") { "development" }
 
-pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+pidfile ENV.fetch('PIDFILE') { "#{app_dir}/tmp/pids/puma.pid" }
+app_dir = File.expand_path('../..', __FILE__)
 
 plugin :tmp_restart
