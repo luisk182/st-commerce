@@ -15,9 +15,26 @@ gem 'puma', '~> 5.0'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+gem 'rack-cors'
 
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'immutable-struct'
+gem 'jwt'
+gem 'active_model_serializers'
+gem 'figaro'
+
+# Use sidekiq for background job processing
+gem 'sidekiq', '~> 5.2.5'
+gem 'redis-namespace'
+
+# Use kaminari for pagination
+gem 'kaminari'
+
+# Use CarrierWave with MiniMagick for image uploads
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick', '~> 4.8' 
+
+gem 'elasticsearch-model', '~> 6'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -28,6 +45,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'factory_bot_rails'
+  gem 'webmock'
+  gem 'faker'
 end
 
 group :development do

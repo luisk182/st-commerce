@@ -1,0 +1,7 @@
+development:
+  cors_origins: '*'
+  redis_url: 'redis://localhost:6379'
+
+test:
+  cors_origins: '*'
+  redis_url: 'redis://localhost:6379'
