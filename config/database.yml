@@ -5,10 +5,10 @@ default: &default
 
 development:
   <<: *default
-  database: st
+  database: st_data_development
   schema_search_path: public
 
 test:
   <<: *default
-  database: pozas_test
+  database: st_data_test
   schema_search_path: public
